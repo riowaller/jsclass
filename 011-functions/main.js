@@ -9,7 +9,7 @@ function doMath (a, b) {
     // console.log(`this is the result ${a * b}`)
 }
 
-nowdoMoreMath = (a, b) => a * b
+const doMoreMath = (a, b) => a * b
  
 
 

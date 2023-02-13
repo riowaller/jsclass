@@ -1,3 +1,4 @@
 # Week 7
 
-//update the DOM
+# Are you using devTools?
+
