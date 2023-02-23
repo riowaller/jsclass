@@ -16,6 +16,8 @@ const trackMPGCost = (miles, gallons, price = 3.79) => {
     myArr.push(MPG, tripCost)
 }
 
+
+
 trackMPGCost(360, 15, 5.40)
 trackMPGCost(320, 12, 5)
 updateDOM(myArr)
