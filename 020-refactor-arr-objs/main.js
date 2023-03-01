@@ -1,8 +1,16 @@
+/* Global const for updating DOM elements by their id*/
+
 const FORM = document.getElementById('form-input')
 const ERR = document.getElementById('err')
 const AVG_OUTPUT = document.getElementById('output-avg')
 
+/* MY_DATA is global array that will be updated by the user input with objects from form input values 
+and calculate data */
+
 const MY_DATA = []
+
+/* updateDOM function takes in input (string value) and id (to determine DOM location to update) 
+and creates and updates DOM elements*/
 
 const updateDOM = (input, id) => {
     const divEl = document.querySelector(id)
@@ -10,6 +18,9 @@ const updateDOM = (input, id) => {
     p.textContent = input
     divEl.appendChild(p)
 }
+
+/* trackMPGandCost function takes in miles, gallons and price and calculates MPG and tripCost and 
+returns an object */
 
 const trackMPGandCost = (miles, gallons, price) => {
     const MPG  = Math.round(miles/gallons)
@@ -22,8 +33,10 @@ const trackMPGandCost = (miles, gallons, price) => {
         gallons: gallons,
         price: price
     }
-    
 }
+
+/* calculateAvg function loops over the MY_DATA to determine average MPG and Trip Cost
+*/
 
 const calculateAvg = () => {
     const numberOfObj = MY_DATA.length
@@ -38,6 +51,9 @@ const calculateAvg = () => {
     updateDOM(`Average MPG is ${avgMPG}`, '#output-avg')
     updateDOM(`Average Trip Cost is ${avgTripCost}`, '#output-avg')
 }
+
+/* isFormValid takes in miles, gallons and price and does simple validation and 
+returns boolean or truthy value back to eventlisteners */
 
 const isFormValid = (miles, gallons, price) => {
     const errMsg = []
@@ -55,6 +71,8 @@ const isFormValid = (miles, gallons, price) => {
     }
 }
 
+/* Eventlisteners for form submit button, checks validation and if valid saves input data and calculated 
+data as an object into global array named MY_DATA */
 
 FORM.addEventListener('submit', (e) => {
     e.preventDefault()
