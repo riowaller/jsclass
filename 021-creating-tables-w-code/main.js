@@ -8,7 +8,12 @@ const TBL_OUTPUT = document.getElementById('table-out')
 /* MY_DATA is global array that will be updated by the user input with objects from form input values 
 and calculate data */
 
-const MY_DATA = []
+function getTripData() {
+    const tripDataJSON = localStorage.getItem('tripdata')
+    return JSON.parse(tripDataJSON)
+}
+
+const MY_DATA = getTripData()
 
 /* updateDOM function takes in input (string value) and id (to determine DOM location to update) 
 and creates and updates DOM elements*/

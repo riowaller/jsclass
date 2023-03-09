@@ -1,1 +1,3 @@
-# Week 6 Video 1 my thoughts
+# Week 10 Edit and Delete
+
+

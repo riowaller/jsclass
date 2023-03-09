@@ -1,5 +1,3 @@
-// updateDOM will output on the webpage any content we provide to it.
-
 const updateDOM = function (text) {
     let newParagraph = document.createElement('p');
     newParagraph.innerHTML = text;
@@ -17,10 +15,11 @@ const updateDOM = function (text) {
   const gymClassStartTime = 8;
   let availableTime = 0;
   const timeBeforeGym = gymClassStartTime - currentTime;
-  const myTurnToDrive = false;
+  const myTurnToDrive = true;
   const unplannedEvent = false;
+
   
-  // determine available time based on if I am driving or getting a drive
+  // determine available time based on if I am driving or getting a ride
   if (myTurnToDrive) {
     availableTime = timeBeforeGym - 0.25;
   } else {
@@ -30,15 +29,15 @@ const updateDOM = function (text) {
   updateDOM(
     '<b>This output is based on the following global variable data:</b>'
   );
-  updateDOM(`Current Time --->  ${currentTime}`);
-  updateDOM(`Gym time  ---> ' ${gymClassStartTime}`);
-  updateDOM(`Time Before Gym --->  ${timeBeforeGym}`);
-  updateDOM(`myTurntoDrive --->  ${myTurnToDrive}`);
-  updateDOM(`unplannedEvent ---> ${unplannedEvent}`);
+  updateDOM(`Current Time -----------> ${currentTime}`);
+  updateDOM(`Gym time ---------------> ${gymClassStartTime}`);
+  updateDOM(`Time Before Gym --------> ${timeBeforeGym}`);
+  updateDOM(`myTurntoDrive ----------> ${myTurnToDrive}`);
+  updateDOM(`unplannedEvent ---------> ${unplannedEvent}`);
   updateDOM(`<--- End of global variable data --->`);
   
   // set variable for output message and list of things to do before gym
-  // list always includes coffee
+  // list always includes tea
   let message = '';
   let list = 'Drink Morning Tea, ';
   
