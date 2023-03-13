@@ -48,16 +48,16 @@ const updateDOM = function (text) {
   // logic for determining what things I can before the gym
   
   if (unplannedEvent) {
-    list = list + 'Check Time';
+    list = 'Check Time';
     message = 'Unplanned event happen, just get back on track tomorrow';
   } else if (availableTime >= 1.5) {
-    list = list + 'Mediate, Get Morning Sun, Make Green Drink';
+    list = 'Mediate, Get Morning Sun, Make Green Drink';
     message = 'Love getting up early!';
   } else if (availableTime >= 0.7 && availableTime <= 1.4) {
-    list = list + 'Mediate, Get Morning Sun';
+    list = 'Mediate, Get Morning Sun';
     message = 'That green drink will taste so good after the workout!';
   } else {
-    list = list + 'Mediate, ';
+    list = 'Mediate, ';
     message = 'Mediation is important!';
   }
   
