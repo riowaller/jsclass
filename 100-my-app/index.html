@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,58 @@
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
+        <form id="form-input">
+            <fieldset class="centered">
+                <h1>Decision Making CRUD app</h1>
+                <h2>For Rio's Morning Tasks</h2>
+                <label for="">Current Time
+                    <select name="currentTime" required>
+                        <option value=""></option>
+                        <option value=5>5am</option>
+                        <option value=6>6am</option>
+                        <option value=7>7am</option>
+                        <option value=8>8am</option>
+                        <option value=9>9am</option>
+                    </select>
+                </label>
+
+                <label for="">Gym Time
+                    <select name="gymTime" required>
+                        <option value=""></option>
+                        <option value=7>7am</option>
+                        <option value=8>8am</option>
+                        <option value=9>9am</option>
+                    </select>
+                </label>
+                
+                <label for="">Day of the Week
+                    <select name="day" required>
+                        <option value=""></option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                    </select>
+                </label>
+                <div>
+                    <label for="">Driving
+                        <input name="myTurnToDrive" type="checkbox" checked />
+                    </label>
+
+                    <label for="">Unplanned Event
+                        <input name="unplannedEvent" type="checkbox" />
+                    </label>
+                </div>
+                <div><button>Submit</button></div>
+            </fieldset>
+            <div id="error-message"></div>
+        </form>
         <div id="output"></div>
     </main>
 </body>
+
 </html>
